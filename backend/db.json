@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ethan Harper",
+      "title": "Product Manager at Tech Solutions",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCt2IwEXFNVh_qrOv_g4nFJ3y1I5vnmn3TmH-yoani1JPSfFSXmoAMSqG_tbuFZfq6s3aVvkydCps_Xhdem88Y-wm2zFVtJUg7bjgUSBdQgJhpmxVwWpjNfy7cYVi0mKIZZ4YCc1Z64PGpTDEbOpgcc8KNRZZcUtsZOwfZws3qOTOXcUPw4g_N1pE5nvvKk1kP_ZnOBapHV9Ddg2Ixi22KQAThyCiSD8Fm-AwLHyR_zdozX2tb50Be6ypx0ECrE1HYkpzw4E_9CmL2I"
+    },
+    {
+      "id": 2,
+      "name": "Olivia Bennett",
+      "title": "Marketing Director at Innovate Corp",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCeTPjJ9lQ1_Wum400VUCi3-4gl29tLJapZZouGigQL6PV3ilDPf6ctYSAKMxSmcgnBhVNq8_Wdz_pkddF5SKLXQM3bMgfHwG0Jafxme80mcItJDEfzNsgPhQvyGnC38VcQvHFqj_RhElz-tLJ33yOLjhNFg14FHKCjIbWWJr3QulYWtfwz90El1BkzLCNiPZkUfuMfxge82qMxmmSijX-q9XUQBhXAj2hzHm-a2YJRbgDONFGVNf9K6jnWYY1KqhooQAWvmx_905k"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Keynote: The Future of Tech",
+      "startTime": "9:00 AM",
+      "endTime": "10:00 AM",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAu6XgCK5ID3ywJFANI8uOV3BnUDqSmEdjwElrZW-fZwMzpFItfSOROKcxi8LYeB2ihDNhKkGDwswkz8vvlFWEeFNmo0i1Zil1OSFJqwIxZ2oFxXXd_uo95mtWvK-BlLht-176JF2HKVoKZwmC_ebJzmy15QYylpqd4qzsMjOaCoikL8WszdqjzMKRJpKI8mrshYj6KLkqF1cMrKT27mIa6p3cprRFojXoNLF5KRIPEOv11iyeUj2HTHVkl7MeTUrBTN9sndxFfiXJK"
+    },
+    {
+      "id": 2,
+      "title": "Workshop: AI in Marketing",
+      "startTime": "11:00 AM",
+      "endTime": "12:00 PM",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAK74atuITna-8PU-2Jy6NaztO8i0X_eHlgDAXyXBY4r4H2wULQhAfLLH_THNeot1OP7G_fURc7zr9cI6eEm1Yl3Hw26t-rKvQKYGfymtlrLJyt8pdY9o7cD9sckDmBoH8Pk4e5uGse__ZjYwaFS9Ul0sscCPfrlmzH9qo6dUhj4nky7jGk9kVpc0ZNDnJT6jdFtSCOZNecGbQvVHUFO6ub4CHnLB959CqjO-tCJUe7Xenst0F8K-So_Gl5f_bXG-pBdVAr-JOChILA"
+    }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Networking Mixer",
+      "description": "Join us for a networking mixer at the end of the day.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDCWHCZfPUzStfnnR_G-ZgU52klqpH5wlu14f2UHkO4iOK3xQvMGBFYZT4XKiScYW27W8ZUjE3lXxLnt0EeGBzeNjBbUbdO1P3YJjBuUSQhTByNVZF_Jh6iXtYw_2tikEwQSESKJxWIXwSoexWl2cz32qrxOElD9RBzAeVr1kpGzHj3l6lKPILgZDklXN2s4MpS-iobGnddOCYf5XT9u5E97-RYi99MrvuoPD7NKZcKIW60DNaoNNURSp1VC2iWVFyg_FZAYq7zY9-W"
+    },
+    {
+      "id": 2,
+      "title": "Interactive Session",
+      "description": "Participate in our interactive session on design thinking.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBTTj95M9JNFpPuJ6MKI17Oed5Gn_tY05EIWJwjt0K3JvB2Omq5MqQNu0welUcllaOGuQaM8PU3AgmqqfWn7AgYZTl8i4h3FeJLowa29JtOZU7uYoCIRgKVMqiH626AaabTmNb-KhGPuzCqHR795XcHI3CgBLpTsMZ_vdHlDYE39omopeSsGOzGoi1Kc2tTE8kPfJUHEbV8_j9C1Rkp3CT_TJKfy1R3QbSnbm-KnKh2y6Fq82zZ6yfIW1faln9t9BZMp4xx0ALxUDLb"
+    }
+  ],
+  "community_posts": [
+    {
+      "id": 1,
+      "title": "Coffee meetup",
+      "time": "10:30 AM",
+      "user": {
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAF_fj6Cxf7jS9rtJxbykPo1ZNR7Qn-Ut6u3F0il62Tge30sITGqU9rhb4-C6ZbzQZepnmd6BiBejG1BX6ANX6vFPOqnUf3KIWyNe6byt_wNCYYlgPwfltNJyqph6l1uVGd0RlowA-O_Qu7qVEqLgzUP1bSMXSNr73r1Cb9jzgTXTj90NtArgmwfLJ9zu-BDgZbxeUih1NXu5n-h_3XeLK6lpaX5_0Tixv3AVFunK7Yri5p6_PURZirpaCUu0m1JOJvGrcBmoWc8eU2"
+      },
+      "icon": "coffee"
+    },
+    {
+      "id": 2,
+      "title": "Rideshare to the venue",
+      "time": "11:00 AM",
+      "user": {
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDW-SNbunLIgXVLGkKobDRTqhqId0SgQy9QAk9kfVsuYrJZmW1spteA2_1hBdjLCRznSCwx9g-G3cXQwjHkS8G4pfM_PelPKEdhUCO7ejXXZMNDJ0TTT20SIoIhHbALtmIyi0TehEqIGnJ7wVHrUR26TkphCm-5e83mMMAG3-xMjfoD3I31kAdLCUkaPNEEY0UAb_UCAW6XsNCLzD0CvqniIGADODwYqt1ZyhCnA8eAkBQ8HpxkZuA4IKdWItRu0QKe93eEXqyBhVgz"
+      },
+      "icon": "directions_car"
+    },
+    {
+      "title": "Test Post",
+      "time": "12:00 PM",
+      "user": {
+        "avatar": "https://example.com/avatar.png"
+      },
+      "icon": "test",
+      "id": 3
+    },
+    {
+      "title": "Another Test Post",
+      "time": "1:00 PM",
+      "user": {
+        "avatar": "https://example.com/avatar2.png"
+      },
+      "icon": "test2",
+      "id": 4
+    }
+  ]
+}
