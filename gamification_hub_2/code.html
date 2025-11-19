@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<title>Gamification Hub</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-900 dark:text-stone-100">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-stone-900 dark:text-stone-100">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold">Gamification Hub</h1>
+<div class="h-10 w-10"></div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 pb-20">
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Challenges</h2>
+<div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex w-64 shrink-0 snap-center flex-col gap-3 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQDzS73bHrovG-V_2c0eZAZUWg3PehbZo0YFaEBzeYYMzEnLYepP1rKlzzY_lqk5NzOcDMolJXr3WPAbKVfe2f_M447umUCZjf-I2Wb1Nfe-D9jntPGcVHpqCbGExJIk3l3Mz6VZQ8cPhdiD4vxXGtpzaI-m19nuOncD3aXMNiSnkVLZR9OHYCPKMMIb5g1w9v65ld2YU5N_KTHXyPgyGF6HfkGBg75Fd8LAShANEWgl-GgqMzxuHO_Y2obEGwGYkINvzpGlo2zAe6")'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Complete 5 event sessions</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Earn 50 points</p>
+</div>
+</div>
+<div class="flex w-64 shrink-0 snap-center flex-col gap-3 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCP0XVclBJhWDJkIP-S1IIM-ivNeZwuxWxd-ez9WE3n71DIEQTylB_5DZNPumFXhO29KYLwrQbg1B5be_Pp8BtWCFzdY1jIEE-5ZDQqR3B3lqg3Gx-H-UV_L0d-3hvnmH86WeCIgoLEZLgr45H4BZet5WGmHBSn9OHJ3_d1WUxwQkR6seVUISfhjn1CKdqRqbvPdHVFov1kHbjt0jAts1qqCarHSKiA7z9Chj2R_hd1jNpV5IJ-OqIdNfoMQhWXsXHeTNPZzZIeAK-d")'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Attend 3 networking events</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Earn 30 points</p>
+</div>
+</div>
+<div class="flex w-64 shrink-0 snap-center flex-col gap-3 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAD0Z8XM2hkJjWF-ZHGzduGrBIvl8mNoYV_4XQy4YoxtwAAb5gKqeDGEjyxvVQuTR9ANbbQiwixl-EDGpLJf5cwmxAnDWfiAphbWt-6ON7z4VvxVnKNxJl5E1dMplmY5sdoMOXg9xNQ96EsghPAImllk97vyEc_ae9tO5tfFA8bBMGDtt_hRCARnO3Ji8DjmHknOPD4GF-8CusJPMzLGaPCArBZLYLGzQeir_8oIyJSGqtWyZmKns3swyad_a5ylll6ypMr1wDafTb")'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Engage with 10 exhibitors</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Earn 20 points</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Leaderboard</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<img alt="Ethan Harper" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfDJYasbeZ0qCQW97iM-VzAyb43vOQqvtcxCVMA4fEf6BTz8OpDB9c4n6QY7-hzcm1OlUM87CI00-kaOQeME7Ix8qEYUOskv4OAD5InSapEEwAItTjmR7SUlBDw9DEFZYDl8qw7Ddx4mMSfIJE-ZTg2PsLhKGB_wXt0KaKshIuDTGB7o1YzmdiVwv__WYsN13rSIPuo5MCJOft5ZjL2mHBgcxHKfstwuy56jY8zTvpNH1uE6uB_nbdbVVBODLMCdfPiKbamD2lgnaJ"/>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 dark:text-stone-200">Ethan Harper</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">120 points</p>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="text-lg font-bold">1</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<img alt="Sophia Bennett" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3wYqjAJTBMUFKdsY2KnsT3T0b7-fVYz-jchd6-59-EYSI_Hh7Il5Xg2MCEMNDRvE2ksXHDdTC75bU08ggz9q4Q_01L_3sFlOhNX9NNTLQPZ4QmNGCimikEeiJpk3IfEQtvW9vqTbTip3hrGWMtrCXTYXneH5gXMJqOK_hDxla_fQg2FVDGrQpKFHH_cr-bXNZ2C2mY2-y9ZhxDI50lMlEf-kIqL2VCPvvZxljkoOByDAKjOO_qE7e22evJMTBGuG-6lhLmkhiIbu2"/>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 dark:text-stone-200">Sophia Bennett</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">110 points</p>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-stone-700 dark:text-stone-300">
+<span class="text-lg font-bold">2</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<img alt="Liam Carter" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEPKhYfIqJxXBb0pdwAGj9nhkCR131awkJLwrCStoM9I6xwMfM4-UaaLQXs6Kw3TjoFea5oTe76eSRwc2FLuucnG5BnGVf4NdPMHnuL8Yqlo5VBmr-LdKWkxGqdz59FdX3xQrHVHMd670PqCGhsQnj_ruhOEX3E0DrwdfDX6ll2cMsNVjBaEB2N4arAIUkMa0wEhvanHLw31NwljMCFSYhE7lZ2I3N8HS-PU_PMIv3EEXHCZnE1EsHF9GZEJ4jqDVlaX7J_55OzZaG"/>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 dark:text-stone-200">Liam Carter</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">100 points</p>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-stone-700 dark:text-stone-300">
+<span class="text-lg font-bold">3</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<img alt="Olivia Davis" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC80l3aEOzwkT9dgjwFhTpYEGm86W3XqPNNAj_lnDHRaGkjr_RqMpyv46NQ8y2OoQ4w32X_Iq4fJbwYxLJF4ZrYTlglkNXyT0XZuSflD523Y2HbNHQeYXSHqWsD7Aqo6s_4nTO3eE-93lQsPBHu9R_YGVWJvB8WeFRBboKkoUWfjCmFeI1BQ42KOzslT0OvKrtAoxaCvAZgfSw2qclFA1C3ZHxPwLOP0hgxgzOjJzYCOBQEsSFeeQnNVsk0ACmk6_m87dpRMfHV0Uxd"/>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 dark:text-stone-200">Olivia Davis</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">90 points</p>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-stone-700 dark:text-stone-300">
+<span class="text-lg font-bold">4</span>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-slate-800/50 p-3 shadow-sm">
+<img alt="Noah Evans" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvsu7ahtRBO4EyC6Z7sm17funql0FQV9QgVoCCwiruIHkJHVNHlq5VuRWG50Qz-o8gWM6Jk15rzciozBnryxRxHaKmIa4bu5BWDhgDbRHE7IdXhlYEjkmkOcJUPkPhsB7xjQB2An2KI4x-uiKHwBtq9aQgd49VEw7P05rV8EHqxwJmrtgNDZsW1qeNs2pK8U6sj65sLAhOBtxUbmGbQMMEMSkT8IuIpLW6cJRsgwl2pDz4bZoseq_SCXkI11fD-XDWeMVQZDyAN3GX"/>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 dark:text-stone-200">Noah Evans</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">80 points</p>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-stone-700 dark:text-stone-300">
+<span class="text-lg font-bold">5</span>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Rewards</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjjg1Gdjf3COGueDILErS3BpSp-MQ1_6o5suUzAowLK2pCB7q8lEGHdeWTf7svGj_q9JMhLY7XWSwXHdmNPQx4wi1UcGDGr2yj87AUiqcr2wAhJo2zgnhRgqfbqSflHmGbSM0BztZYNiV_oaKWBThBsi0jgUygIIg25BgonVqeIVB88hb-T-3bl0Cl2U-9fLxDFhmCwo1KhCvSK6ghWwUqryGVdGS7mDF3TGcvTgzc9mA9LbKmkINGRsCaMPB6J4BAg6gylln7eSR1");'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Bronze Badge</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Attend 5 sessions</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLDiNgGQoIdfxvxQZnVe-QfXJR6TXvNd0DGqoHvmHatZARDIbjEqg4qLwcAyo0WpLfeB0-Fo2TdLLfIXrrmQqDTYxBh3YMg47T4nx13rpzXPnrDw3P9aZhky2rwq4LZ_ZLtTvKjgb56GUMJFnRN13oAb6fpt9GdAMKB6K733JAiovw90L-3tV_jd3BudU0wZp-FpzKEzLYICXU4BUN5-Ed3MS8wyQoxUPi9NbzrGBApyg3_1pITkYe4sJo_xwvIhzIXQi-2H2M63U0");'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Silver Badge</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Attend 10 sessions</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcoKNPW5oHPsBBpaBuRK1U6ifALV6M5Gz4WDPs44Mp-bupStoJt7Qm-VzPyW75m3y1uUH79TywXQpuoyG7o_3hffdA7Wh6tXdgUcOhaEiwoC1Yt0broXARjAGwaaixLUEXVsBDDnIWB_F6hlputOhJpB57vZF8HT3nMZ7i_i8kYoRPvxFL7QBRbsoQ4iK4JESBNO9fxlIbNflLM9lm6Lvz6t5Ll3KVtEc9FR_1-l4Iysd8VN19UnPWulfJpxkmEyBe5JsvFqhmTeVK");'></div>
+<div>
+<p class="font-semibold text-stone-800 dark:text-stone-200">Gold Badge</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Attend 15 sessions</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 border-t border-stone-200/80 dark:border-stone-800/80 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex h-20 items-center justify-around px-2">
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined"> home </span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined"> calendar_month </span>
+<span class="text-xs">Agenda</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined"> forum </span>
+<span class="text-xs">Networking</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined"> groups </span>
+<span class="text-xs">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<div class="rounded-full bg-primary/20 p-3">
+<span class="material-symbols-outlined"> emoji_events </span>
+</div>
+<span class="text-xs font-bold text-primary dark:text-primary">Gamification</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

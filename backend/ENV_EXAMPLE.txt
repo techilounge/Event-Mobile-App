@@ -1,0 +1,45 @@
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+BASE_URL=http://localhost:3000
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production-min-32-characters
+JWT_REFRESH_SECRET=your-super-secret-refresh-token-key-change-this-in-production-min-32-characters
+JWT_EXPIRES_IN=15m
+JWT_REFRESH_EXPIRES_IN=7d
+
+# CORS Configuration (comma-separated origins)
+CORS_ORIGIN=http://localhost:3000,http://localhost:19006
+
+# Rate Limiting Configuration
+RATE_LIMIT_MAX=100
+AUTH_RATE_LIMIT_MAX=5
+UPLOAD_RATE_LIMIT_MAX=10
+PASSWORD_RESET_LIMIT_MAX=3
+API_KEY_LIMIT_MAX=5
+
+# Request Size Limits
+MAX_REQUEST_SIZE=10mb
+
+# Database Configuration
+# Priority: Firebase > PostgreSQL > JSON file
+# Set USE_FIREBASE=true to use Firebase Firestore
+# Set USE_DATABASE=true to use PostgreSQL, or leave unset/false to use JSON file
+
+# Firebase Configuration (highest priority)
+USE_FIREBASE=true
+FIREBASE_PROJECT_ID=event-mobile-app-8805b
+
+# Optional: If using environment variables instead of service account file
+# FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+# FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxxx@event-mobile-app-8805b.iam.gserviceaccount.com
+
+# PostgreSQL Configuration (if not using Firebase)
+USE_DATABASE=false
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=eventapp
+DB_USER=postgres
+DB_PASSWORD=your_password
+

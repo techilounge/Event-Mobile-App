@@ -1,0 +1,53 @@
+﻿
+> mobileapp@1.0.0 test
+> jest __tests__/App.test.js --verbose --no-coverage
+
+npm : FAIL __tests__/App.test.js
+At line:1 char:1
++ npm test -- __tests__/App.test.js 
+--verbose --no-coverage 2>&1 | Out- 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpec 
+   ified: (FAIL __tests__/App.test.j  
+  s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeC 
+   ommandError
+ 
+  ΓùÅ Test suite failed to run
+
+    Cannot find module 
+'../firebase.config' from 
+'jest.setup.js'
+
+    [0m [90m 51 |[39m         
+getById[33m:[39m 
+jest[33m.[39mfn()[33m,[39m
+     [90m 52 |[39m     }[33m,[39m
+    [31m[1m>[22m[39m[90m 53 
+|[39m     communityAPI[33m:[39m {
+     [90m    |[39m               
+[31m[1m^[22m[39m
+     [90m 54 |[39m         
+getAll[33m:[39m 
+jest[33m.[39mfn()[33m,[39m
+     [90m 55 |[39m         
+create[33m:[39m 
+jest[33m.[39mfn()[33m,[39m
+     [90m 56 |[39m     
+}[33m,[39m[0m
+
+      at 
+Resolver._throwModNotFoundError (node_
+modules/jest-resolve/build/index.js:86
+3:11)
+      at Object.<anonymous> 
+(jest.setup.js:53:15)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.727 s
+Ran all test suites matching 
+__tests__/App.test.js.

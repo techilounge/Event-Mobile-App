@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add to Calendar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "foreground-light": "#101922",
+                        "foreground-dark": "#f6f7f8",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1b2734",
+                        "border-light": "#e3e8ef",
+                        "border-dark": "#2a3b4d"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .custom-radio:checked {
+            background-image: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%23fff%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+            background-color: #137fec;
+            border-color: #137fec;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4 border-b border-border-light dark:border-border-dark">
+<button class="text-foreground-light dark:text-foreground-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">Add to Calendar</h1>
+<div class="w-6"></div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6">
+<h2 class="text-2xl font-bold text-foreground-light dark:text-foreground-dark mb-6">Choose Calendar</h2>
+<div class="space-y-4">
+<label class="flex items-center justify-between p-4 rounded-lg border bg-card-light dark:bg-card-dark border-border-light dark:border-border-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 transition-all duration-200">
+<span class="text-base font-medium text-foreground-light dark:text-foreground-dark">Google Calendar</span>
+<input checked="" class="custom-radio h-5 w-5 appearance-none rounded-full border-2 border-border-light dark:border-border-dark focus:outline-none focus:ring-0 focus:ring-offset-0 transition-all duration-200" name="calendar_choice" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg border bg-card-light dark:bg-card-dark border-border-light dark:border-border-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 transition-all duration-200">
+<span class="text-base font-medium text-foreground-light dark:text-foreground-dark">Outlook Calendar</span>
+<input class="custom-radio h-5 w-5 appearance-none rounded-full border-2 border-border-light dark:border-border-dark focus:outline-none focus:ring-0 focus:ring-offset-0 transition-all duration-200" name="calendar_choice" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg border bg-card-light dark:bg-card-dark border-border-light dark:border-border-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 transition-all duration-200">
+<span class="text-base font-medium text-foreground-light dark:text-foreground-dark">Apple Calendar</span>
+<input class="custom-radio h-5 w-5 appearance-none rounded-full border-2 border-border-light dark:border-border-dark focus:outline-none focus:ring-0 focus:ring-offset-0 transition-all duration-200" name="calendar_choice" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg border bg-card-light dark:bg-card-dark border-border-light dark:border-border-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 transition-all duration-200">
+<span class="text-base font-medium text-foreground-light dark:text-foreground-dark">Other</span>
+<input class="custom-radio h-5 w-5 appearance-none rounded-full border-2 border-border-light dark:border-border-dark focus:outline-none focus:ring-0 focus:ring-offset-0 transition-all duration-200" name="calendar_choice" type="radio"/>
+</label>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4">
+<button class="w-full h-12 px-5 rounded-lg bg-primary text-white text-base font-bold flex items-center justify-center hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30 transition-all duration-200">
+                Add to Calendar
+            </button>
+</footer>
+</div>
+
+</body></html>

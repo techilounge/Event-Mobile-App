@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Event App</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<h1 class="flex-1 text-center text-lg font-bold text-black dark:text-white pl-12">Home</h1>
+<button class="flex h-12 w-12 items-center justify-center rounded-full text-black dark:text-white">
+<span class="material-symbols-outlined text-2xl">
+            notifications
+          </span>
+</button>
+</header>
+<main class="p-4">
+<section class="mb-6">
+<h2 class="text-2xl font-bold text-black dark:text-white mb-4">My Agenda</h2>
+<div class="flex gap-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex w-44 flex-none flex-col gap-3">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu6XgCK5ID3ywJFANI8uOV3BnUDqSmEdjwElrZW-fZwMzpFItfSOROKcxi8LYeB2ihDNhKkGDwswkz8vvlFWEeFNmo0i1Zil1OSFJqwIxZ2oFxXXd_uo95mtWvK-BlLht-176JF2HKVoKZwmC_ebJzmy15QYylpqd4qzsMjOaCoikL8WszdqjzMKRJpKI8mrshYj6KLkqF1cMrKT27mIa6p3cprRFojXoNLF5KRIPEOv11iyeUj2HTHVkl7MeTUrBTN9sndxFfiXJK");'></div>
+<div>
+<p class="font-medium text-black dark:text-white">Keynote: The Future of Tech</p>
+<p class="text-sm text-black/60 dark:text-white/60">9:00 AM - 10:00 AM</p>
+</div>
+</div>
+<div class="flex w-44 flex-none flex-col gap-3">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAK74atuITna-8PU-2Jy6NaztO8i0X_eHlgDAXyXBY4r4H2wULQhAfLLH_THNeot1OP7G_fURc7zr9cI6eEm1Yl3Hw26t-rKvQKYGfymtlrLJyt8pdY9o7cD9sckDmBoH8Pk4e5uGse__ZjYwaFS9Ul0sscCPfrlmzH9qo6dUhj4nky7jGk9kVpc0ZNDnJT6jdFtSCOZNecGbQvVHUFO6ub4CHnLB959CqjO-tCJUe7Xenst0F8K-So_Gl5f_bXG-pBdVAr-JOChILA");'></div>
+<div>
+<p class="font-medium text-black dark:text-white">Workshop: AI in Marketing</p>
+<p class="text-sm text-black/60 dark:text-white/60">11:00 AM - 12:00 PM</p>
+</div>
+</div>
+<div class="flex w-44 flex-none flex-col gap-3">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCmORiLCI49Tw1fVLfqS4NQB7nTflnlMPAkA1LLQRnGFAXwsQj1saHD9qyiD2x0_aBbI6o8LKv2FEMAVDRiXVsCwcqZGYpp30K-EHf0Im5n-ArJ2jCNjpCB3mluf0KCWToYojdzLyO0H4KAy9qluh-1l8bgOas8G8RUgvFRgHYPPn_62S0KJeE-hPCylo8H6h8uV1ISm_-drAScVo90cxD2dMUydKytrYsEt1xucvyvhjLnOSp5rRQU3mO1fWN_K4cGwlY9NX5-IgH");'></div>
+<div>
+<p class="font-medium text-black dark:text-white">Panel: Startup Success</p>
+<p class="text-sm text-black/60 dark:text-white/60">2:00 PM - 3:00 PM</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold text-black dark:text-white mb-4">Announcements</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+<div class="flex-1">
+<h3 class="text-base font-bold text-black dark:text-white">Networking Mixer</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-3">Join us for a networking mixer at the end of the day.</p>
+<button class="h-9 w-fit rounded-full bg-primary/10 px-4 text-sm font-medium text-primary dark:bg-primary/20">
+                  View Details
+                </button>
+</div>
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCWHCZfPUzStfnnR_G-ZgU52klqpH5wlu14f2UHkO4iOK3xQvMGBFYZT4XKiScYW27W8ZUjE3lXxLnt0EeGBzeNjBbUbdO1P3YJjBuUSQhTByNVZF_Jh6iXtYw_2tikEwQSESKJxWIXwSoexWl2cz32qrxOElD9RBzAeVr1kpGzHj3l6lKPILgZDklXN2s4MpS-iobGnddOCYf5XT9u5E97-RYi99MrvuoPD7NKZcKIW60DNaoNNURSp1VC2iWVFyg_FZAYq7zY9-W");'></div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+<div class="flex-1">
+<h3 class="text-base font-bold text-black dark:text-white">Interactive Session</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-3">Participate in our interactive session on design thinking.</p>
+<button class="h-9 w-fit rounded-full bg-primary px-4 text-sm font-medium text-white">
+                  Join Now
+                </button>
+</div>
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTTj95M9JNFpPuJ6MKI17Oed5Gn_tY05EIWJwjt0K3JvB2Omq5MqQNu0welUcllaOGuQaM8PU3AgmqqfWn7AgYZTl8i4h3FeJLowa29JtOZU7uYoCIRgKVMqiH626AaabTmNb-KhGPuzCqHR795XcHI3CgBLpTsMZ_vdHlDYE39omopeSsGOzGoi1Kc2tTE8kPfJUHEbV8_j9C1Rkp3CT_TJKfy1R3QbSnbm-KnKh2y6Fq82zZ6yfIW1faln9t9BZMp4xx0ALxUDLb");'></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+<span class="text-xs font-medium">Agenda</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">groups</span>
+<span class="text-xs font-medium">Networking</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">tag</span>
+<span class="text-xs font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">info</span>
+<span class="text-xs font-medium">Info</span>
+</a>
+</nav>
+<div class="h-safe-area-bottom bg-background-light dark:bg-background-dark"></div>
+</footer>
+</div>
+
+</body></html>

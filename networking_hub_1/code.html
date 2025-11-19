@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Networking - Event App</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f46e5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111827",
+                        "foreground-light": "#101922",
+                        "foreground-dark": "#f9fafb",
+                        "subtle-light": "#6b7280",
+                        "subtle-dark": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display">
+<div class="relative flex flex-col h-screen min-h-screen w-full overflow-x-hidden">
+<header class="sticky top-0 bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center justify-between p-4">
+<button class="p-2 text-foreground-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-bold text-foreground-dark">Networking</h1>
+<button class="p-2 text-foreground-dark">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<nav class="border-b border-border-dark">
+<div class="flex justify-around px-2">
+<a class="w-full text-center py-3 border-b-2 border-primary text-primary text-sm font-bold" href="#">People</a>
+<a class="w-full text-center py-3 border-b-2 border-transparent text-subtle-dark text-sm font-bold hover:text-primary transition-colors" href="#">Companies</a>
+<a class="w-full text-center py-3 border-b-2 border-transparent text-subtle-dark text-sm font-bold hover:text-primary transition-colors whitespace-nowrap" href="#">Recommendations</a>
+</div>
+</nav>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="divide-y divide-border-dark">
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Ethan Harper" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt2IwEXFNVh_qrOv_g4nFJ3y1I5vnmn3TmH-yoani1JPSfFSXmoAMSqG_tbuFZfq6s3aVvkydCps_Xhdem88Y-wm2zFVtJUg7bjgUSBdQgJhpmxVwWpjNfy7cYVi0mKIZZ4YCc1Z64PGpTDEbOpgcc8KNRZZcUtsZOwfZws3qOTOXcUPw4g_N1pE5nvvKk1kP_ZnOBapHV9Ddg2Ixi22KQAThyCiSD8Fm-AwLHyR_zdozX2tb50Be6ypx0ECrE1HYkpzw4E_9CmL2I"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Ethan Harper</p>
+<p class="text-sm text-subtle-dark">Product Manager at Tech Solutions</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Olivia Bennett" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCeTPjJ9lQ1_Wum400VUCi3-4gl29tLJapZZouGigQL6PV3ilDPf6ctYSAKMxSmcgnBhVNq8_Wdz_pkddF5SKLXQM3bMgfHwG0Jafxme80mcItJDEfzNsgPhQvyGnC38VcQvHFqj_RhElz-tLJ33yOLjhNFg14FHKCjIbWWJr3QulYWtfwz90El1BkzLCNiPZkUfuMfxge82qMxmmSijX-q9XUQBhXAj2hzHm-a2YJRbgDONFGVNf9K6jnWYY1KqhooQAWvmx_905k"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Olivia Bennett</p>
+<p class="text-sm text-subtle-dark">Marketing Director at Innovate Corp</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Noah Carter" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRWX_Ze4tcFmGkbm7zw_MNPTIbVBL3Yt7QW6n3l1VsYR5sSPNoxXEntLRYz-FaYHP5YClH6_yC-qfgnFJp_JE_49FfH_nkAQOFfh3-J2bpAjqxNT1ExuepZroQA8YtsAG-4DmV0nTgUeQeIz9k3t9j59yNRQZ-OgpylX2lUdsIRdRELJdgv7LV37e-EZyC1WucCaGvn-lLO_TQ2CvhXzMoFneQox8_oxn6LosQgJCFbrFNamRK_Y-NdWZw7oFXk07tHBq65W64xb5m"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Noah Carter</p>
+<p class="text-sm text-subtle-dark">CEO of Future Dynamics</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Ava Mitchell" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH8FhDLx5s-w5wgxXtR3eAVI4d7sOvQGO5ATRenlcT3Qn5cAu7qJl2a1CZCUxQQzYTkHbuecIlte1DEbifQL0Eh4qVMwGUe_UjAZI4An53v1VHUwl3AmTlei57cz4NPUeknwLUbNNtE71hkmOHhhURf8iSTjAC3olfCpPID9hxFZrYEFRKSXqwC93aNNb5838YMeXCfFQl3pIlM3lIbEFzssF3aUOU2-gJkIK2eO4ho5eTL-3t0kTOzMT614fYfaXUAakLD4EHGbzM"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Ava Mitchell</p>
+<p class="text-sm text-subtle-dark">Lead Designer at Creative Minds</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Liam Foster" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD799mEGFd4DHANaxykyorJ-r5NobLU1WZ73ORpWJHNgLpcDJTAaHbl5L1suFwspLcvBXcUiKaGiiECIfL0oVnpXoWpYaIYWbkB6o-6d3dhRF1atYicjMqRDhvOZkRBZJby9EfVt-2ZWgBV076CrHvf1PpkCZjsF_QSxVX5ZX9tKNwbPGffCJan3zd1dPKxNboFVpMVjfn-DFDobCjG4-y8ci5dWkx8dMXR8W1PrQqjb9kquMu82kaAyrfdpwiH9noMtsMTv6tJ2ZJP"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Liam Foster</p>
+<p class="text-sm text-subtle-dark">Software Engineer at CodeCrafters</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/10 cursor-pointer">
+<img alt="Sophia Lee" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwQRctlnWdJRYhcpsjW2beBgH0ISEbhZY7SZu2gN27pnsDKGlA9ri6nuZRXUpSa7h22k1GpJofZmLQrNMGDlmGceAQr4F_sIA5YIfYgBZ1cIQ2eK9ofTkQuwImL0YK5ihCr-athXNNAnyxuQL9kX5Wr2OR5GXqPDaWl8dWXK_BLys5Ch0u-LydYS7Y6-eMg0xVBx2gHjxgLfce1Rzx37-LOBFFRJbHHiwfEsZkIHNZc9tE4VeyN61pA4xge85t566alKFDnAAyD7Y5"/>
+<div class="flex-1">
+<p class="font-bold text-foreground-dark">Sophia Lee</p>
+<p class="text-sm text-subtle-dark">UX/UI Specialist at PixelPerfect</p>
+</div>
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-dark border-t border-border-dark">
+<nav class="flex justify-around items-start pt-2 pb-3">
+<a class="flex flex-col items-center gap-1 text-subtle-dark w-1/5" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-dark w-1/5" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-xs font-medium">Agenda</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary w-1/5" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">group</span>
+<span class="text-xs font-bold">Networking</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-dark w-1/5" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-xs font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-dark w-1/5" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="text-xs font-medium">Info</span>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

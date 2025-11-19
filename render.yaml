@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: event-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: USE_DATABASE
+        value: true
+      - key: USE_FIREBASE
+        value: false
+    healthCheckPath: /
