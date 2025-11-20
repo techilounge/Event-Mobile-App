@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 const { authenticateToken, authenticateRefreshToken } = require('../middleware/auth');
 const db = require('../db/adapter');
 const USE_FIREBASE = process.env.USE_FIREBASE === 'true';
-const { auth: firebaseAuth } = USE_FIREBASE ? require('../config/firebase') : { auth: null };
+const firebaseConfig = require('../config/firebase');
 
 const router = express.Router();
 
@@ -80,9 +80,9 @@ router.post(
 
       // If using Firebase, create user in Firebase Auth first
       let firebaseUid = null;
-      if (USE_FIREBASE && firebaseAuth) {
+      if (USE_FIREBASE) {
         try {
-          const firebaseUser = await firebaseAuth.createUser({
+          const firebaseUser = await firebaseConfig.auth.createUser({
             email,
             password,
             displayName: name,
@@ -95,6 +95,9 @@ router.post(
               message: 'An account with this email already exists in Firebase.',
             });
           }
+          // If auth is not initialized (e.g. bad config), this will throw.
+          // We should catch it and log it, but maybe fail the registration?
+          console.error('Firebase creation error:', firebaseError);
           throw firebaseError;
         }
       }
@@ -164,8 +167,11 @@ router.post(
       const { email, password } = req.body;
 
       // If using Firebase, verify with Firebase Auth
-      if (USE_FIREBASE && firebaseAuth) {
+      if (USE_FIREBASE) {
         try {
+          // Check if auth is working by accessing it (will throw if init fails)
+          const authInstance = firebaseConfig.auth;
+
           // Note: Firebase Admin SDK doesn't have a direct password verification method
           // The mobile app should handle Firebase Auth login and send the ID token
           // This endpoint can be used for server-side verification if needed
@@ -174,9 +180,12 @@ router.post(
             message: 'Please use Firebase Authentication from the mobile app. Send the Firebase ID token to verify the user.',
           });
         } catch (error) {
-          return res.status(401).json({
-            error: 'Invalid credentials',
-            message: 'Email or password is incorrect.',
+          // If init failed, fall through to local auth or return error?
+          // For now, return error to be safe
+          console.error('Firebase init check failed:', error);
+          return res.status(500).json({
+            error: 'Configuration Error',
+            message: 'Firebase configuration is invalid on the server.',
           });
         }
       }
@@ -293,7 +302,12 @@ router.post('/logout', (req, res) => {
  * @desc    Verify Firebase ID token and get user info
  * @access  Public (but requires valid Firebase token)
  */
-if (USE_FIREBASE && firebaseAuth) {
+/**
+ * @route   POST /api/auth/verify-firebase-token
+ * @desc    Verify Firebase ID token and get user info
+ * @access  Public (but requires valid Firebase token)
+ */
+if (USE_FIREBASE) {
   router.post(
     '/verify-firebase-token',
     [
@@ -312,16 +326,17 @@ if (USE_FIREBASE && firebaseAuth) {
         }
 
         const { idToken } = req.body;
-        
+
         // Verify the Firebase ID token
-        const decodedToken = await firebaseAuth.verifyIdToken(idToken);
-        
+        // Access auth lazily
+        const decodedToken = await firebaseConfig.auth.verifyIdToken(idToken);
+
         // Get or create user in Firestore
         let userData = await db.getUserById(decodedToken.uid);
-        
+
         if (!userData) {
           // Create user in Firestore from Firebase Auth data
-          const firebaseUser = await firebaseAuth.getUser(decodedToken.uid);
+          const firebaseUser = await firebaseConfig.auth.getUser(decodedToken.uid);
           userData = await db.createUser({
             id: decodedToken.uid, // Use Firebase UID as document ID
             email: firebaseUser.email,

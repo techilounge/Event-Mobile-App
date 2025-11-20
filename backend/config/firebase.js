@@ -18,7 +18,7 @@ function initializeFirebase() {
 
   try {
     const serviceAccountPath = path.join(__dirname, '../firebase-service-account.json');
-    
+
     // Option 1: Use service account file (recommended for local development)
     if (fs.existsSync(serviceAccountPath)) {
       const serviceAccount = require(serviceAccountPath);
@@ -27,7 +27,7 @@ function initializeFirebase() {
         projectId: process.env.FIREBASE_PROJECT_ID || serviceAccount.project_id || 'event-mobile-app-8805b',
       });
       console.log('✅ Firebase Admin SDK initialized (using service account file)');
-    } 
+    }
     // Option 2: Use environment variables (recommended for production)
     else if (process.env.FIREBASE_PRIVATE_KEY && process.env.FIREBASE_CLIENT_EMAIL) {
       firebaseApp = admin.initializeApp({
@@ -39,7 +39,7 @@ function initializeFirebase() {
         projectId: process.env.FIREBASE_PROJECT_ID || 'event-mobile-app-8805b',
       });
       console.log('✅ Firebase Admin SDK initialized (using environment variables)');
-    } 
+    }
     // Option 3: Use default credentials (for Google Cloud environments)
     else {
       firebaseApp = admin.initializeApp({
@@ -47,7 +47,7 @@ function initializeFirebase() {
       });
       console.log('✅ Firebase Admin SDK initialized (using default credentials)');
     }
-    
+
     initialized = true;
     return firebaseApp;
   } catch (error) {
@@ -57,9 +57,10 @@ function initializeFirebase() {
 }
 
 // Initialize Firebase
-if (process.env.USE_FIREBASE === 'true') {
-  initializeFirebase();
-}
+// Removed top-level initialization to allow lazy loading and prevent startup crashes
+// if (process.env.USE_FIREBASE === 'true') {
+//   initializeFirebase();
+// }
 
 // Get Firestore instance
 const getDb = () => {
