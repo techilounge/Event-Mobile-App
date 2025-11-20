@@ -12,7 +12,8 @@ export const firebaseConfig = {
 
 // Backend API Configuration
 export const API_CONFIG = {
-  BASE_URL: __DEV__ ? 'http://localhost:3000' : 'https://event-mobile-app-production.up.railway.app',
+  BASE_URL: 'https://event-mobile-app-production.up.railway.app', // Always use production backend for now
+  // BASE_URL: __DEV__ ? 'http://localhost:3000' : 'https://event-mobile-app-production.up.railway.app',
   TIMEOUT: 10000,
 };
 

@@ -22,7 +22,7 @@
     "expo": "~54.0.25",
     "expo-dev-client": "^6.0.18",
     "expo-status-bar": "~3.0.8",
-    "react": "19.2.0",
+    "react": "19.1.0",
     "react-native": "0.81.5",
     "react-native-gesture-handler": "^2.29.1",
     "react-native-safe-area-context": "^5.6.2",
@@ -35,6 +35,10 @@
     "jest": "^29.7.0",
     "jest-expo": "^54.0.13",
     "react-native-jest-mocks": "^1.5.0",
-    "react-test-renderer": "^19.2.0"
+    "react-test-renderer": "19.1.0"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   }
 }

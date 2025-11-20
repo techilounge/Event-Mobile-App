@@ -92,7 +92,12 @@ app.use((req, res, next) => {
 setInterval(() => {
   const memoryUsage = process.memoryUsage();
   console.log(`💓 Heartbeat - RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)}MB - Heap: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)}MB`);
-}, 5000);
+}, 30000); // Every 30 seconds
+
+// Dedicated health check for Railway
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 // Health check endpoint
 app.get('/', async (req, res) => {
