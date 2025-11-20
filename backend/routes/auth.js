@@ -329,7 +329,13 @@ if (USE_FIREBASE) {
 
         // Verify the Firebase ID token
         // Access auth lazily
-        const decodedToken = await firebaseConfig.auth.verifyIdToken(idToken);
+        console.log('🔍 Attempting to verify Firebase ID token...');
+        console.log('🔍 Accessing firebaseConfig.auth...');
+        const auth = firebaseConfig.auth;
+        console.log('✅ firebaseConfig.auth accessed successfully');
+
+        const decodedToken = await auth.verifyIdToken(idToken);
+        console.log('✅ Token verified. UID:', decodedToken.uid);
 
         // Get or create user in Firestore
         let userData = await db.getUserById(decodedToken.uid);
