@@ -91,8 +91,11 @@ app.use((req, res, next) => {
 // Heartbeat to check if process is alive
 setInterval(() => {
   const memoryUsage = process.memoryUsage();
-  console.log(`💓 Heartbeat - RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)}MB - Heap: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)}MB`);
+  // Use stderr to avoid buffering issues
+  process.stderr.write(`💓 Heartbeat - RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)}MB - Heap: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)}MB\n`);
 }, 30000); // Every 30 seconds
+
+
 
 // Dedicated health check for Railway
 app.get('/health', (req, res) => {
@@ -509,11 +512,11 @@ app.use((req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`🚀 Server is running on port ${port} (0.0.0.0)`);
+  process.stderr.write(`🚀 Server is running on port ${port} (0.0.0.0)\n`);
   console.log(`📝 Environment: ${process.env.NODE_ENV || 'development'}`);
 
   if (USE_FIREBASE) {
-    console.log(`🔥 Firebase enabled`);
+    process.stderr.write(`🔥 Firebase enabled\n`);
     console.log(`📦 Database: Firestore`);
   } else if (process.env.USE_DATABASE === 'true') {
     console.log(`🔐 JWT Authentication enabled`);
